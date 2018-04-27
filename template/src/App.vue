@@ -1,19 +1,25 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <hello></hello>
+    {{#router}}
+    <router-view/>
+    {{else}}
+    <HelloWorld/>
+    {{/router}}
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+{{#unless router}}
+import HelloWorld from './components/HelloWorld'
 
+{{/unless}}
 export default {
-  name: 'app',
+  name: 'App'{{#router}}{{else}},
   components: {
-    Hello{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+    HelloWorld
+  }{{/router}}
+}
 </script>
 
 <style>
