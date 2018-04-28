@@ -15,7 +15,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm i -g vue-cli
-$ vue init stefanonepa/vuejs-webpack-express my-project
+$ vue init com1com4/vuejs-webpack-express my-project
 $ cd my-project
 $ npm i
 $ npm run dev
